@@ -3,15 +3,29 @@
 /*                                                        :::      ::::::::   */
 /*   ft_is_sort.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cpeset-c <cpeset-c@student.42barce>        +#+  +:+       +#+        */
+/*   By: cpeset-c <cpeset-c@student.42barce.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 17:44:02 by cpeset-c          #+#    #+#             */
-/*   Updated: 2022/12/06 20:50:16 by cpeset-c         ###   ########.fr       */
+/*   Updated: 2025/04/08 01:11:04 by cpeset-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * @name ft_is_sort
+ * @brief Check if the array is sorted in ascending or descending order.
+ * 
+ * @param tab The array of integers to check.
+ * @param lenght The length of the array.
+ * @param f The comparison function to use for sorting.
+ * @return int Return 1 if the array is sorted, otherwise return 0.
+ * 
+ * @dir ft_sort/
+ * @file ft_is_sort.c
+ * @date 18-07-2022
+ * @author cpeset-c
+ */
 int
 	ft_is_sort(int *tab, int lenght, int (*f)(int, int))
 {

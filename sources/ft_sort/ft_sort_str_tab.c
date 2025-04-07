@@ -3,15 +3,27 @@
 /*                                                        :::      ::::::::   */
 /*   ft_sort_str_tab.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cpeset-c <cpeset-c@student.42barce>        +#+  +:+       +#+        */
+/*   By: cpeset-c <cpeset-c@student.42barce.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 17:44:33 by cpeset-c          #+#    #+#             */
-/*   Updated: 2022/12/06 20:50:46 by cpeset-c         ###   ########.fr       */
+/*   Updated: 2025/04/08 01:14:59 by cpeset-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * @name ft_sort_str_tab
+ * @brief Sort an array of strings in ascending order.
+ * 
+ * @param tab The array of strings to sort.
+ * @return void
+ * 
+ * @dir ft_sort/
+ * @file ft_sort_str_tab.c
+ * @date 18-07-2022
+ * @author cpeset-c
+ */
 void
 	ft_sort_str_tab(char **tab)
 {

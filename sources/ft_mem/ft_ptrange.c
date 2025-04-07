@@ -6,7 +6,7 @@
 /*   By: cpeset-c <cpeset-c@student.42barce.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/16 16:14:20 by cpeset-c          #+#    #+#             */
-/*   Updated: 2025/02/03 16:43:13 by cpeset-c         ###   ########.fr       */
+/*   Updated: 2025/04/08 01:03:19 by cpeset-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 /**
  * @name ft_ptrange
- * @brief Create an array of integers.
+ * @brief Create an array of integers from a given range.
  * 
  * @param range The pointer to the array of integers.
  * @param min The minimum value.

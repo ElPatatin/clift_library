@@ -6,7 +6,7 @@
 /*   By: cpeset-c <cpeset-c@student.42barce.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/16 16:54:44 by cpeset-c          #+#    #+#             */
-/*   Updated: 2025/02/03 16:47:18 by cpeset-c         ###   ########.fr       */
+/*   Updated: 2025/04/08 01:07:24 by cpeset-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,13 @@ int
 	ft_putstr_fd(char	*str, int fd)
 {
 	unsigned int	i;
+	size_t			len;
 
 	i = 0;
 	if (!str)
 		return (0);
-	if (write(fd, str, ft_strlen(str)) < 0)
+	len = ft_strlen(str);
+	if (write(fd, str, len) != 0)
 		return (-1);
-	return (ft_strlen(str));
+	return (len);
 }

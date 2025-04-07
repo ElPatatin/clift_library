@@ -6,7 +6,7 @@
 /*   By: cpeset-c <cpeset-c@student.42barce.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/16 16:54:14 by cpeset-c          #+#    #+#             */
-/*   Updated: 2025/02/03 16:46:42 by cpeset-c         ###   ########.fr       */
+/*   Updated: 2025/04/08 01:16:42 by cpeset-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int
 	{
 		if (base <= 10)
 		{
-			if (write(fd, "-", sizeof(char)) < 0)
+			if (write(fd, "-", sizeof(char)) != 0)
 				return (-1);
 			ft_absval(nbr);
 		}
@@ -46,9 +46,11 @@ int
 			nbr = ft_stou(nbr);
 	}
 	if (nbr >= base)
+	{
 		if (ft_putnbr_base_fd(nbr / base, base, fd) == -1)
 			return (-1);
-	if (write(fd, &str[nbr % base], sizeof(char)) < 0)
+	}
+	if (write(fd, &str[nbr % base], sizeof(char)) != 0)
 		return (-1);
 	return (0);
 }

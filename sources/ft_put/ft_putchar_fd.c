@@ -6,7 +6,7 @@
 /*   By: cpeset-c <cpeset-c@student.42barce.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/16 16:53:52 by cpeset-c          #+#    #+#             */
-/*   Updated: 2025/02/03 16:46:32 by cpeset-c         ###   ########.fr       */
+/*   Updated: 2025/04/08 01:04:31 by cpeset-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@
 int
 	ft_putchar_fd(int c, int fd)
 {
-	if (write(fd, &c, sizeof(char)) < 0)
+	if (write(fd, &c, sizeof(char)) != 0)
 		return (-1);
 	return (1);
 }

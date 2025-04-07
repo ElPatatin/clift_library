@@ -1,6 +1,9 @@
-# Project: libft
+# Project: clift
 
+# Reset
 DEF_COLOR	:= \033[0;39m
+
+# Foreground Colors
 GRAY		:= \033[0;90m
 RED			:= \033[0;91m
 GREEN		:= \033[0;92m
@@ -9,3 +12,42 @@ BLUE		:= \033[0;94m
 MAGENTA		:= \033[0;95m
 CYAN		:= \033[0;96m
 WHITE		:= \033[0;97m
+
+# Bright Foreground Colors
+BRIGHT_GRAY		:= \033[0;37m
+BRIGHT_RED		:= \033[1;91m
+BRIGHT_GREEN	:= \033[1;92m
+BRIGHT_YELLOW	:= \033[1;93m
+BRIGHT_BLUE		:= \033[1;94m
+BRIGHT_MAGENTA	:= \033[1;95m
+BRIGHT_CYAN		:= \033[1;96m
+BRIGHT_WHITE	:= \033[1;97m
+
+# Background Colors
+BG_GRAY		:= \033[0;100m
+BG_RED		:= \033[0;101m
+BG_GREEN	:= \033[0;102m
+BG_YELLOW	:= \033[0;103m
+BG_BLUE		:= \033[0;104m
+BG_MAGENTA	:= \033[0;105m
+BG_CYAN		:= \033[0;106m
+BG_WHITE	:= \033[0;107m
+
+# Bright Background Colors
+BG_BRIGHT_GRAY		:= \033[0;47m
+BG_BRIGHT_RED		:= \033[1;101m
+BG_BRIGHT_GREEN		:= \033[1;102m
+BG_BRIGHT_YELLOW	:= \033[1;103m
+BG_BRIGHT_BLUE		:= \033[1;104m
+BG_BRIGHT_MAGENTA	:= \033[1;105m
+BG_BRIGHT_CYAN		:= \033[1;106m
+BG_BRIGHT_WHITE		:= \033[1;107m
+
+# Text Styles
+BOLD		:= \033[1m
+DIM			:= \033[2m
+ITALIC		:= \033[3m
+UNDERLINE	:= \033[4m
+BLINK		:= \033[5m
+REVERSE		:= \033[7m
+HIDDEN		:= \033[8m
