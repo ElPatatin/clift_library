@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cpeset-c <cpeset-c@student.42barce>        +#+  +:+       +#+        */
+/*   By: cpeset-c <cpeset-c@student.42barce.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 17:44:39 by cpeset-c          #+#    #+#             */
-/*   Updated: 2023/02/01 15:53:08 by cpeset-c         ###   ########.fr       */
+/*   Updated: 2025/04/08 01:45:00 by cpeset-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,19 @@ static char	**ft_splitfree(char **ptr, int len);
 static int	ft_wordcount(char const *s, char c, t_bool flag);
 static int	start(char *s, char c, int i);
 
+/**
+ * @name ft_split
+ * @brief Split a string into an array of strings using a delimiter.
+ *
+ * @param str The string to split.
+ * @param c The delimiter character.
+ * @return char** An array of strings, or NULL if an error occurs.
+ *
+ * @dir ft_str/
+ * @file ft_split.c
+ * @date 18-07-2022
+ * @author cpeset-c
+ */
 char
 	**ft_split(char const *str, char c)
 {

@@ -3,15 +3,33 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cpeset-c <cpeset-c@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cpeset-c <cpeset-c@student.42barce.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 17:52:20 by cpeset-c          #+#    #+#             */
-/*   Updated: 2023/02/22 11:32:57 by cpeset-c         ###   ########.fr       */
+/*   Updated: 2025/04/08 02:12:37 by cpeset-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * @name ft_substr
+ * @brief Create a substring from a string.
+ * If the start index is greater than
+ * the length of the string, an empty string is returned.
+ * If the length of the substring is greater than the length of the string,
+ * the length is adjusted to the length of the string minus the start index.
+ *
+ * @param s The string to create the substring from.
+ * @param start The starting index of the substring.
+ * @param len The length of the substring.
+ * @return char* A pointer to the new substring, or NULL if an error occurs.
+ *
+ * @dir ft_str/
+ * @file ft_substr.c
+ * @date 18-07-2022
+ * @author cpeset-c
+ */
 char
 	*ft_substr(const char *s, unsigned int start, size_t len)
 {

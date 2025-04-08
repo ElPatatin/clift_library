@@ -6,11 +6,11 @@
 /*   By: cpeset-c <cpeset-c@student.42barce.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 17:48:55 by cpeset-c          #+#    #+#             */
-/*   Updated: 2024/12/07 13:36:17 by cpeset-c         ###   ########.fr       */
+/*   Updated: 2025/04/08 01:54:43 by cpeset-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libstr.h"
+#include "libft.h"
 
 /**
  * @name ft_strchr

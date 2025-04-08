@@ -3,15 +3,28 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cpeset-c <cpeset-c@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cpeset-c <cpeset-c@student.42barce.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 17:49:39 by cpeset-c          #+#    #+#             */
-/*   Updated: 2023/02/19 20:13:55 by cpeset-c         ###   ########.fr       */
+/*   Updated: 2025/04/08 01:58:36 by cpeset-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * @name ft_strjoin
+ * @brief Join two strings into a new string.
+ *
+ * @param s1 The first string.
+ * @param s2 The second string.
+ * @return char* A pointer to the new string, or NULL if an error occurs.
+ *
+ * @dir ft_str/
+ * @file ft_strjoin.c
+ * @date 18-07-2022
+ * @author cpeset-c
+ */
 char
 	*ft_strjoin(char *s1, char *s2)
 {

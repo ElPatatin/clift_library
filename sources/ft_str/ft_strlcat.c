@@ -3,15 +3,30 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cpeset-c <cpeset-c@student.42barce>        +#+  +:+       +#+        */
+/*   By: cpeset-c <cpeset-c@student.42barce.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 17:49:46 by cpeset-c          #+#    #+#             */
-/*   Updated: 2022/12/06 20:52:53 by cpeset-c         ###   ########.fr       */
+/*   Updated: 2025/04/08 02:06:25 by cpeset-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * @name ft_strlcat
+ * @brief Concatenate two strings with a limit on the size of the destination string.
+ *
+ * @param dest The destination string.
+ * @param src The source string.
+ * @param dstsize The size of the destination buffer.
+ * @return size_t The total length of the string that would have been created if
+ * there was enough space in the destination buffer.
+ *
+ * @dir ft_str/
+ * @file ft_strlcat.c
+ * @date 18-07-2022
+ * @author cpeset-c
+ */
 size_t
 	ft_strlcat(char *dest, const char *src, size_t dstsize)
 {

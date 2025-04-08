@@ -3,15 +3,28 @@
 /*                                                        :::      ::::::::   */
 /*   ft_str_wcount.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cpeset-c <cpeset-c@student.42barce>        +#+  +:+       +#+        */
+/*   By: cpeset-c <cpeset-c@student.42barce.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 17:48:38 by cpeset-c          #+#    #+#             */
-/*   Updated: 2022/12/06 20:52:28 by cpeset-c         ###   ########.fr       */
+/*   Updated: 2025/04/08 01:45:43 by cpeset-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * @name ft_str_wcount
+ * @brief Count the number of words in a string separated by a character.
+ *
+ * @param s The string to count the words in.
+ * @param c The character that separates the words.
+ * @return int The number of words in the string.
+ *
+ * @dir ft_str/
+ * @file ft_str_wcount.c
+ * @date 18-07-2022
+ * @author cpeset-c
+ */
 int
 	ft_str_wcount(char const *s, char c)
 {
