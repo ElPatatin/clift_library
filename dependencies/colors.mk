@@ -1,53 +1,158 @@
 # Project: clift
 
-# Reset
-DEF_COLOR	:= \033[0;39m
+# Reset Color
+# This is the default color code used to reset the terminal color to its default state.
+DEF_COLOR	:= \033[0m
 
-# Foreground Colors
+# DefaultColrs -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- #
+
+# Normal Colors
 GRAY		:= \033[0;90m
 RED			:= \033[0;91m
 GREEN		:= \033[0;92m
+PURPLE		:= \033[0;94m
 YELLOW		:= \033[0;93m
-BLUE		:= \033[0;94m
 MAGENTA		:= \033[0;95m
 CYAN		:= \033[0;96m
 WHITE		:= \033[0;97m
 
-# Bright Foreground Colors
-BRIGHT_GRAY		:= \033[0;37m
-BRIGHT_RED		:= \033[1;91m
-BRIGHT_GREEN	:= \033[1;92m
-BRIGHT_YELLOW	:= \033[1;93m
-BRIGHT_BLUE		:= \033[1;94m
-BRIGHT_MAGENTA	:= \033[1;95m
-BRIGHT_CYAN		:= \033[1;96m
-BRIGHT_WHITE	:= \033[1;97m
+# Bold Colors
+BOLD_GRAY		:= \033[1;37m
+BOLD_RED		:= \033[1;91m
+BOLD_GREEN		:= \033[1;92m
+BOLD_YELLOW		:= \033[1;93m
+BOLD_PURPLE		:= \033[1;94m
+BOLD_MAGENTA	:= \033[1;95m
+BOLD_CYAN		:= \033[1;96m
+BOLD_WHITE		:= \033[1;97m
+
+# Dim Colors
+DIM_GRAY		:= \033[2;37m
+DIM_RED			:= \033[2;91m
+DIM_GREEN		:= \033[2;92m
+DIM_YELLOW		:= \033[2;93m
+DIM_PURPLE		:= \033[2;94m
+DIM_MAGENTA		:= \033[2;95m
+DIM_CYAN		:= \033[2;96m
+DIM_WHITE		:= \033[2;97m
+
+# Cursive Colors
+CURSIVE_GRAY	:= \033[3;37m
+CURSIVE_RED		:= \033[3;91m
+CURSIVE_GREEN	:= \033[3;92m
+CURSIVE_YELLOW	:= \033[3;93m
+CURSIVE_PURPLE	:= \033[3;94m
+CURSIVE_MAGENTA	:= \033[3;95m
+CURSIVE_CYAN	:= \033[3;96m
+CURSIVE_WHITE	:= \033[3;97m
+
+# Underline Colors
+UNDERLINE_GRAY	:= \033[4;37m
+UNDERLINE_RED	:= \033[4;91m
+UNDERLINE_GREEN	:= \033[4;92m
+UNDERLINE_YELLOW:= \033[4;93m
+UNDERLINE_PURPLE:= \033[4;94m
+UNDERLINE_MAGENTA:= \033[4;95m
+UNDERLINE_CYAN	:= \033[4;96m
+UNDERLINE_WHITE	:= \033[4;97m
 
 # Background Colors
-BG_GRAY		:= \033[0;100m
-BG_RED		:= \033[0;101m
-BG_GREEN	:= \033[0;102m
-BG_YELLOW	:= \033[0;103m
-BG_BLUE		:= \033[0;104m
-BG_MAGENTA	:= \033[0;105m
-BG_CYAN		:= \033[0;106m
-BG_WHITE	:= \033[0;107m
+BACKGROUND_GRAY	:= \033[7;37m
+BACKGROUND_RED	:= \033[7;91m
+BACKGROUND_GREEN:= \033[7;92m
+BACKGROUND_YELLOW:= \033[7;93m
+BACKGROUND_PURPLE:= \033[7;94m
+BACKGROUND_MAGENTA:= \033[7;95m
+BACKGROUND_CYAN	:= \033[7;96m
+BACKGROUND_WHITE:= \033[7;97m
 
-# Bright Background Colors
-BG_BRIGHT_GRAY		:= \033[0;47m
-BG_BRIGHT_RED		:= \033[1;101m
-BG_BRIGHT_GREEN		:= \033[1;102m
-BG_BRIGHT_YELLOW	:= \033[1;103m
-BG_BRIGHT_BLUE		:= \033[1;104m
-BG_BRIGHT_MAGENTA	:= \033[1;105m
-BG_BRIGHT_CYAN		:= \033[1;106m
-BG_BRIGHT_WHITE		:= \033[1;107m
+# Highlight Colors
+HIGHLIGHT_GRAY	:= \033[8;37m
+HIGHLIGHT_RED	:= \033[8;91m
+HIGHLIGHT_GREEN	:= \033[8;92m
+HIGHLIGHT_YELLOW:= \033[8;93m
+HIGHLIGHT_PURPLE:= \033[8;94m
+HIGHLIGHT_MAGENTA:= \033[8;95m
+HIGHLIGHT_CYAN	:= \033[8;96m
+HIGHLIGHT_WHITE:= \033[8;97m
 
-# Text Styles
-BOLD		:= \033[1m
-DIM			:= \033[2m
-ITALIC		:= \033[3m
-UNDERLINE	:= \033[4m
-BLINK		:= \033[5m
-REVERSE		:= \033[7m
-HIDDEN		:= \033[8m
+# Blink Colors
+BLINK_GRAY		:= \033[5;37m
+BLINK_RED		:= \033[5;91m
+BLINK_GREEN		:= \033[5;92m
+BLINK_YELLOW	:= \033[5;93m
+BLINK_PURPLE	:= \033[5;94m
+BLINK_MAGENTA	
+
+# CustomColors -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- #
+
+# These colors are defined using RGB values in the format \033[38;2;R;G;Bm
+# where R, G, and B are the red, green, and blue components of the color.
+# Example: ORANGE := \033[38;2;255;165;0m  # RGB(255, 165, 0)
+# You can use these colors in your terminal if it supports 24-bit color.
+# Note: The RGB values are in the range of 0-255.
+# See: https://en.wikipedia.org/wiki/ANSI_escape_code#24-bit
+# See: https://en.wikipedia.org/wiki/ANSI_escape_code#8-bit
+# See: https://github.com/Gugor/ANSI-cheat-sheet
+
+# Orange
+# The RGB values for orange are (255, 165, 0)
+ORANGE := \033[38;2;255;165;0m
+BOLD_ORANGE := \033[1;38;2;255;165;0m
+CURSIVE_ORANGE := \033[3;38;2;255;165;0m
+UNDERLINE_ORANGE := \033[4;38;2;255;165;0m
+BACKGROUND_ORANGE := \033[7;38;2;255;165;0m
+HIGHLIGHT_ORANGE := \033[8;38;2;255;165;0m
+BLINK_ORANGE := \033[5;38;2;255;165;0m
+
+# Blue
+# The RGB values for blue are (0, 0, 255)
+BLUE := \033[38;2;0;0;255m
+BOLD_BLUE := \033[1;38;2;0;0;255m
+CURSIVE_BLUE := \033[3;38;2;0;0;255m
+UNDERLINE_BLUE := \033[4;38;2;0;0;255m
+BACKGROUND_BLUE := \033[7;38;2;0;0;255m
+HIGHLIGHT_BLUE := \033[8;38;2;0;0;255m
+BLINK_BLUE := \033[5;38;2;0;0;255m
+
+# Light Blue
+# The RGB values for light blue are (173, 216, 230)
+LIGHT_BLUE := \033[38;2;173;216;230m
+BOLD_LIGHT_BLUE := \033[1;38;2;173;216;230m
+CURSIVE_LIGHT_BLUE := \033[3;38;2;173;216;230m
+UNDERLINE_LIGHT_BLUE := \033[4;38;2;173;216;230m
+BACKGROUND_LIGHT_BLUE := \033[7;38;2;173;216;230m
+HIGHLIGHT_LIGHT_BLUE := \033[8;38;2;173;216;230m
+BLINK_LIGHT_BLUE := \033[5;38;2;173;216;230m
+
+# Light Green
+# The RGB values for light green are (144, 238, 144)
+LIGHT_GREEN := \033[38;2;144;238;144m
+BOLD_LIGHT_GREEN := \033[1;38;2;144;238;144m
+CURSIVE_LIGHT_GREEN := \033[3;38;2;144;238;144m
+UNDERLINE_LIGHT_GREEN := \033[4;38;2;144;238;144m
+BACKGROUND_LIGHT_GREEN := \033[7;38;2;144;238;144m
+HIGHLIGHT_LIGHT_GREEN := \033[8;38;2;144;238;144m
+BLINK_LIGHT_GREEN := \033[5;38;2;144;238;144m
+
+# Goldenrod
+# The RGB values for goldenrod are (218, 165, 32)
+GOLDENROD := \033[38;2;218;165;32m
+BOLD_GOLDENROD := \033[1;38;2;218;165;32m
+CURSIVE_GOLDENROD := \033[3;38;2;218;165;32m
+UNDERLINE_GOLDENROD := \033[4;38;2;218;165;32m
+BACKGROUND_GOLDENROD := \033[7;38;2;218;165;32m
+HIGHLIGHT_GOLDENROD := \033[8;38;2;218;165;32m
+BLINK_GOLDENROD := \033[5;38;2;218;165;32m
+
+# Salmon
+# The RGB values for ffa69e are (255, 166, 158)
+SALMON := \033[38;2;255;166;158m
+BOLD_SALMON := \033[1;38;2;255;166;158m
+CURSIVE_SALMON := \033[3;38;2;255;166;158m
+UNDERLINE_SALMON := \033[4;38;2;255;166;158m
+BACKGROUND_SALMON := \033[7;38;2;255;166;158m
+HIGHLIGHT_SALMON := \033[8;38;2;255;166;158m
+BLINK_SALMON := \033[5;38;2;255;166;158m
+
+#... Add more colors as needed using the same format
