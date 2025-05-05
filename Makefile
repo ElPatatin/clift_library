@@ -6,7 +6,7 @@
 #    By: cpeset-c <cpeset-c@student.42barce.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/27 19:35:19 by cpeset-c          #+#    #+#              #
-#    Updated: 2025/05/04 18:36:08 by cpeset-c         ###   ########.fr        #
+#    Updated: 2025/05/05 05:08:59 by cpeset-c         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,13 +15,18 @@
 NAME		= libft.a
 MKFL		= true
 
+# -=-=-=-=	PRE-REQUISITES -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- #
+
+.RECIPEPREFIX	:= \t
+.DEFAULT		:= all
+
 # -=-=-=-=-	CLRS -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- #
 
--include ./dependencies/colors.mk
+include ./dependencies/colors.mk
 
 # -=-=-=-=-	CMND -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- #
 
--include ./dependencies/commands.mk
+include ./dependencies/commands.mk
 
 # -=-=-=-=-	PATH -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- #
 
@@ -42,6 +47,7 @@ DEP_DIR	= .deps/
 
 # -=-=-=-=-	FILE -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- #
 
+# vpath		%.h $(INC_DIR)
 INCLUDE		= -I./$(INC_DIR)
 
 FIS_SRC	= ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c \
@@ -94,11 +100,12 @@ DEPS	= $(addprefix $(DEP_DIR), $(addsuffix .d, $(basename $(SRCS))))
 
 # -=-=-=-=-	RULE -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- #
 
-$(OBJ_DIR)%.o: %.c $(MKFL)
-	@$(MK) $(dir $@) $(dir $(subst $(OBJ_DIR), $(DEP_DIR), $@))
-	@printf "$(WHITE)\r\tCompiling: $(YELLOW)$<$(DEF_COLOR)                           \r"
+.PHONY: all clean fclean re
+
+$(OBJ_DIR)%.o: %.c
 	@$(CC) $(CFLAGS) $(DFLAGS) $(XFLAGS) $(INCLUDE) -c $< -o $@
 	@mv $(patsubst %.o, %.d, $@) $(dir $(subst $(OBJ_DIR), $(DEP_DIR), $@))
+	@printf "$(WHITE)\r\tCompiling: $(YELLOW)$<$(DEF_COLOR)"
 
 all:
 	@$(MAKE) $(NAME)
@@ -110,7 +117,12 @@ $(NAME):: $(OBJS)
 $(NAME)::
 	@printf "\t$(WHITE)Nothing more to be done for library \033[1;31m'libft'.$(DEF_CLR) \n"
 
--include $(DEPS)
+$(OBJS): | $(OBJ_DIR)
+
+$(OBJ_DIR):
+	@$(MK) $(dir $@) $(dir $(subst $(OBJ_DIR), $(DEP_DIR), $@))
+
+sinclude $(DEPS)
 
 clean:
 	@$(RM) -r $(OBJ_DIR) $(DEP_DIR)
@@ -127,4 +139,3 @@ re:
 	@echo ""
 	@echo "$(GREEN)	Cleaned and rebuilt everything for 'libft'.$(DEF_COLOR)"
 
-.PHONY:	all clean fclean re
